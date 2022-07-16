@@ -4,10 +4,7 @@ class Solution {
         int[] answer = new int[2];
         for(int i=0;i<nums.length;i++){
             if(hs.containsKey(target-nums[i])){
-                // return new int[] {i, hs.get(target-nums[i])};
-                answer[0]=i;
-                answer[1]=hs.get(target-nums[i]);
-                return answer;
+                return new int[] {i, hs.get(target-nums[i])};
             }else {
                 hs.put(nums[i], i);
             }
